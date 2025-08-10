@@ -190,3 +190,74 @@ button:hover {
  transform: translateY(0);
  }
 }
+/* All previous CSS remains the same... */
+/* Add the new animation styles below */
+
+/* --- Holiday Animation Styles --- */
+
+#animation-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place it behind all content */
+}
+
+/* Snowfall Animation */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+/* Fireworks Animation */
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: launch 1s ease-out forwards;
+}
+
+.firework.explode::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit; /* Use the same color as the particle */
+    border-radius: 50%;
+    animation: explode 0.5s ease-out forwards;
+}
+
+@keyframes launch {
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(30);
+        opacity: 0;
+    }
+}
