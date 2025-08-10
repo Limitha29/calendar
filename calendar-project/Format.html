@@ -1,53 +1,69 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+ <html lang="en">
+ <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026 Calendar Day Finder</title>
+  <title>2026 Calendar Explorer</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+ </head>
+ <body>
   <div id="container">
-    <h1>Find Day & Holiday for 2026</h1>
-    <form id="date">
-      <label for="month">Month:</label>
-      <select id="month" name="month" required>
-        <option value="">--Select Month--</option>
-        <option value="1">January</option>
-        <option value="2">February</option>
-        <option value="3">March</option>
-        <option value="4">April</option>
-        <option value="5">May</option>
-        <option value="6">June</option>
-        <option value="7">July</option>
-        <option value="8">August</option>
-        <option value="9">September</option>
-        <option value="10">October</option>
-        <option value="11">November</option>
-        <option value="12">December</option>
-      </select>
-      <br /><br />
-
-      <label for="day">Day:</label>
-      <select id="day" name="day" required>
-        <option value="">--Select Day--</option>
-        <!-- JavaScript will populate this dynamically based on selected month -->
-      </select>
-      <br /><br />
-
-      <button type="submit">Find Day & Event</button>
-    </form>
-    <div id="result"></div>
-    
-<br />
-<div id="add-event-container" style="display: none;">
-  <br />
-  <button id="add-event-btn">➕ Add Holiday/Event</button>
-</div>
-
+  <header>
+  <h1>🗓️ Explore 2026 Dates & Events 🌟</h1>
+  <p class="subtitle">Find the day of the week and discover holidays</p>
+  </header>
+  <form id="date">
+  <div class="input-group">
+  <label for="month">Month:</label>
+  <div class="select-wrapper">
+  <select id="month" name="month" required>
+  <option value="">-- Select Month --</option>
+  <option value="1">January</option>
+  <option value="2">February</option>
+  <option value="3">March</option>
+  <option value="4">April</option>
+  <option value="5">May</option>
+  <option value="6">June</option>
+  <option value="7">July</option>
+  <option value="8">August</option>
+  <option value="9">September</option>
+  <option value="10">October</option>
+  <option value="11">November</option>
+  <option value="12">December</option>
+  </select>
+  <div class="select-arrow"></div>
   </div>
+  </div>
+  
+  <div class="input-group">
+  <label for="day">Day:</label>
+  <div class="select-wrapper">
+  <select id="day" name="day" required>
+  <option value="">-- Select Day --</option>
+  </select>
+  <div class="select-arrow"></div>
+  </div>
+  </div>
+  
+  <button type="submit" class="find-button">🔍 Find Day & Event</button>
+  </form>
+  
+  <div id="result" class="result-area">
+  </div>
+  
+  <div id="add-event-container" style="display: none; margin-top: 20px;">
+  <button id="add-event-btn" class="add-button">➕ Add Holiday/Event</button>
+  </div>
+  
+  <div class="footer">
+  <p>© 2026 Calendar Explorer</p>
+  <p>From Thrissur, Kerala, India 🌴</p>
+  </div>
+  </div>
+ 
 
   <script src="script.js"></script>
-</body>
-</html>
+ </body>
+ </html>
